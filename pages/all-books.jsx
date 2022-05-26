@@ -19,7 +19,7 @@ const AllBooks = ({ data }) => {
 };
 
 export default AllBooks;
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   await connect();
   const books = bookSchema.find({});
   const data = (await books).map((e, i) => {

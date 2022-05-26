@@ -16,7 +16,7 @@ const AddBook = ({ data }) => {
       bookshelf: form.bookshelf.value,
       cover: form.cover.value,
     };
-    fetch("http://localhost:3000/api/book", {
+    fetch("/api/book", {
       method: "POST",
       body: JSON.stringify(object),
     });
